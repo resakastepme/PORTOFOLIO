@@ -1,0 +1,341 @@
+.rubik-font {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.image-container img {
+    -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%);
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%);
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+#myself {
+    width: 55%;
+    height: 85%;
+}
+
+#myname {
+    font-size: 60px;
+}
+
+.justifyText {
+    text-align: justify;
+}
+
+.card-container {
+    text-align: center;
+    /* Center inline-block cards */
+    white-space: normal;
+    /* Allow wrapping */
+}
+
+.cardMod {
+    display: inline-block;
+    margin: 5px;
+    /* Space between cards */
+    width: calc((100% - 50px) / 6);
+    /* Ensure 6 cards per row */
+    height: 4rem;
+    line-height: 4rem;
+    /* Center text vertically */
+    text-align: center;
+    background-color: #6c757d;
+    /* Secondary color */
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.box {
+    position: relative;
+    width: 300px;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background: #fff; */
+    /* box-shadow: 0 30px 60px rgba(0,0,0,.2); */
+}
+
+.box .percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.box .percent svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.box .percent svg circle {
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke-width: 10;
+    stroke: #000;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+
+.box .percent svg circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: #f3f3f3;
+}
+
+.box .percent svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 100) /100);
+    stroke: #03a9f4;
+    opacity: 10;
+    animation: animate-circle 3s cubic-bezier(0, 0.23, 1, .1);
+}
+
+@keyframes animate-circle {
+    0% {
+        opacity: 0;
+        stroke-dashoffset: 440;
+    }
+
+    30% {
+        opacity: 0.30;
+        stroke-dashoffset: 200;
+    }
+
+    80% {
+        opacity: 0.80;
+        stroke-dashoffset: 100;
+    }
+
+    100% {
+        opacity: 10;
+    }
+}
+
+.box .percent .number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+}
+
+.box .percent .number h2 {
+    font-size: 48px;
+}
+
+.box .percent .number h2 span {
+    font-size: 24px;
+}
+
+.box .text {
+    padding: 10px 0 0;
+    /* color: #ffffff; */
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.box .percent2 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.box .percent2 svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.box .percent2 svg circle {
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke-width: 10;
+    stroke: #000;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+
+.box .percent2 svg circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: #f3f3f3;
+}
+
+.box .percent2 svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 80) /100);
+    stroke: #03a9f4;
+    opacity: 10;
+    animation: animate-circle2 3s cubic-bezier(0, 0.23, 1, .1);
+}
+
+@keyframes animate-circle2 {
+    0% {
+        opacity: 0;
+        stroke-dashoffset: 440;
+    }
+
+    30% {
+        opacity: 0.30;
+        stroke-dashoffset: 200;
+    }
+
+    80% {
+        opacity: 0.80;
+        stroke-dashoffset: 100;
+    }
+
+    100% {
+        opacity: 10;
+    }
+}
+
+.box .percent2 .number2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+}
+
+.box .percent2 .number2 h2 {
+    font-size: 48px;
+}
+
+.box .percent2 .number2 h2 span {
+    font-size: 24px;
+}
+
+.border-left {
+    border-left: 1px solid #dee2e6 !important;
+}
+
+.border-right {
+    border-right: 1px solid #dee2e6 !important;
+}
+
+.border-primary {
+    border-color: #0BCEAF !important;
+}
+
+.text-primary {
+    color: #0BCEAF !important;
+}
+
+.position-absolute {
+    position: absolute !important;
+}
+
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+.position-relative {
+    position: relative !important;
+}
+
+.pt-2,
+.py-2 {
+    padding-top: 0.5rem !important;
+}
+
+.pl-4,
+.px-4 {
+    padding-left: 1.5rem !important;
+}
+
+.ml-2,
+.mx-2 {
+    margin-left: 0.5rem !important;
+}
+
+#hoverableProyek1:hover {
+    background-color: #3a3a3a;
+}
+
+#shieldedProyekLogo {
+    height: 70%;
+    width: 100%;
+}
+
+#hoverableProyek2:hover {
+    background-color: #3a3a3a;
+}
+
+#valinsProyekLogo {
+    height: 70%;
+    width: 100%;
+}
+
+
+@media (max-width: 414px) {
+
+    #myself {
+        width: 100%;
+        height: 1000%;
+    }
+
+    #myname {
+        font-size: 30px;
+    }
+
+    .breakCard {
+        margin-top: 10px;
+    }
+
+    .cardMod {
+        display: inline-block;
+        margin: 5px;
+        /* Space between cards */
+        width: calc((100% - 50px) / 2);
+        /* Ensure 6 cards per row */
+        height: 4rem;
+        line-height: 4rem;
+        /* Center text vertically */
+        text-align: center;
+        background-color: #6c757d;
+        /* Secondary color */
+        color: white;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #hoverableProyek1{
+        height:100%;
+        margin-bottom: 25px;
+    }
+
+    #shieldedProyekLogo {
+        width: 100%;
+        height: 115%;
+    }
+
+    #hoverableProyek2{
+        height:100%;
+        margin-bottom: 25px;
+    }
+
+    #valinsProyekLogo {
+        width: 100%;
+        height: 115%;
+    }
+
+}
